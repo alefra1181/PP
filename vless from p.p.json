@@ -87,7 +87,7 @@
         ],
         "enabled": true,
         "insecure": true,
-        "server_name": "vlEssPP.AhMAdReZAamInI-93.wORkERs.DeV",
+        "server_name": "PP.AlefRA.Eu.OrG",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -96,7 +96,7 @@
       "transport": {
         "early_data_header_name": "Sec-WebSocket-Protocol",
         "headers": {
-          "Host": "vlEssPP.AhMAdReZAamInI-93.wORkERs.DeV"
+          "Host": "PP.AlefRA.Eu.OrG"
         },
         "max_early_data": 2048,
         "path": "/",
@@ -176,7 +176,7 @@
         ],
         "enabled": true,
         "insecure": true,
-        "server_name": "vlEssPP.AhMAdReZAamInI-93.wORkERs.DeV",
+        "server_name": "PP.AlefRA.Eu.OrG",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -185,7 +185,7 @@
       "transport": {
         "early_data_header_name": "Sec-WebSocket-Protocol",
         "headers": {
-          "Host": "vlEssPP.AhMAdReZAamInI-93.wORkERs.DeV"
+          "Host": "PP.AlefRA.Eu.OrG"
         },
         "max_early_data": 2048,
         "path": "/",
@@ -206,7 +206,7 @@
         ],
         "enabled": true,
         "insecure": true,
-        "server_name": "vleSSpp.aLEFra-1181.wORkeRs.DEv",
+        "server_name": "PP.AlefRA.Eu.OrG",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -215,12 +215,12 @@
       "transport": {
         "early_data_header_name": "Sec-WebSocket-Protocol",
         "headers": {
-          "Host": "vleSSpp.aLEFra-1181.wORkeRs.DEv"
+          "Host": "PP.AlefRA.Eu.OrG"
         },
         "path": "/",
         "type": "ws"
       },
-      "uuid": "26fb1541-e328-4d27-b0d9-69a766070d25",
+      "uuid": "0db54081-2711-46e6-bdfc-045bdabffeb0",
       "type": "vless",
       "domain_strategy": "",
       "tag": "worker 5️⃣"
@@ -235,7 +235,7 @@
       "pre_shared_key": "",
       "private_key": "mL11kkXnNi46gmvLT7Ci1xjn1X3FMKUvF+NeHPC4fFM=",
       "reserved": "hTlE",
-      "server": "162.159.192.204",
+      "server": "ip.alefra.eu.org",
       "server_port": 1070,
       "type": "wireguard",
       "domain_strategy": "",
@@ -251,7 +251,7 @@
       "pre_shared_key": "",
       "private_key": "mL11kkXnNi46gmvLT7Ci1xjn1X3FMKUvF+NeHPC4fFM=",
       "reserved": "hTlE",
-      "server": "162.159.192.135",
+      "server": "ip.alefra.eu.org",
       "server_port": 1070,
       "type": "wireguard",
       "domain_strategy": "",
