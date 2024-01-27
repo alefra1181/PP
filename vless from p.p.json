@@ -87,7 +87,7 @@
         ],
         "enabled": true,
         "insecure": true,
-        "server_name": "PP.AlefRA.Eu.OrG",
+        "server_name": "vleSSPp.ahmADrezaAMINi-93.woRKers.DeV",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -96,7 +96,7 @@
       "transport": {
         "early_data_header_name": "Sec-WebSocket-Protocol",
         "headers": {
-          "Host": "PP.AlefRA.Eu.OrG"
+          "Host": "vleSSPp.ahmADrezaAMINi-93.woRKers.DeV"
         },
         "max_early_data": 2048,
         "path": "/",
@@ -176,7 +176,7 @@
         ],
         "enabled": true,
         "insecure": true,
-        "server_name": "PP.AlefRA.Eu.OrG",
+        "server_name": "vleSSPp.ahmADrezaAMINi-93.woRKers.DeV",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -185,7 +185,7 @@
       "transport": {
         "early_data_header_name": "Sec-WebSocket-Protocol",
         "headers": {
-          "Host": "PP.AlefRA.Eu.OrG"
+          "Host": "vleSSPp.ahmADrezaAMINi-93.woRKers.DeV"
         },
         "max_early_data": 2048,
         "path": "/",
@@ -206,7 +206,7 @@
         ],
         "enabled": true,
         "insecure": true,
-        "server_name": "PP.AlefRA.Eu.OrG",
+        "server_name": "vleSSPp.ahmADrezaAMINi-93.woRKers.DeV",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -215,7 +215,7 @@
       "transport": {
         "early_data_header_name": "Sec-WebSocket-Protocol",
         "headers": {
-          "Host": "PP.AlefRA.Eu.OrG"
+          "Host": "vleSSPp.ahmADrezaAMINi-93.woRKers.DeV"
         },
         "path": "/",
         "type": "ws"
