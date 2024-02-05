@@ -1,14 +1,12 @@
 {
-  "dns": {
+  "log": {
+    "disabled": false,
+    "level": "info",
+    "timestamp": true
+  },
+    "dns": {
     "independent_cache": true,
-    "rules": [
-      {
-        "domain": [
-          "dns.google"
-        ],
-        "server": "dns-direct"
-      }
-    ],
+    "rules": [],
     "servers": [
       {
         "address": "https://8.8.8.8/dns-query",
@@ -34,47 +32,22 @@
       }
     ]
   },
-  "experimental": {
-    "clash_api": {
-      "cache_file": "../cache/clash.db",
-      "external_controller": "127.0.0.1:9090",
-      "external_ui": "../files/yacd"
-    }
-  },
-  "inbounds": [
+      "inbounds": [
     {
-      "listen": "127.0.0.1",
-      "listen_port": 6450,
-      "override_address": "8.8.8.8",
-      "override_port": 53,
-      "tag": "dns-in",
-      "type": "direct"
-    },
-    {
-      "domain_strategy": "",
-      "endpoint_independent_nat": true,
-      "inet4_address": [
-        "172.19.0.1/28"
-      ],
-      "mtu": 9000,
-      "sniff": true,
-      "sniff_override_destination": false,
+      "type": "tun",
+      "inet4_address": "172.19.0.1/30",
+      "inet6_address": "fdfe:dcba:9876::1/126",
+      "auto_route": true,
+      "strict_route": true,
       "stack": "mixed",
-      "tag": "tun-in",
-      "type": "tun"
-    },
-    {
-      "domain_strategy": "",
-      "listen": "127.0.0.1",
-      "listen_port": 2080,
-      "sniff": true,
-      "sniff_override_destination": false,
-      "tag": "mixed-in",
-      "type": "mixed"
+      "sniff": true
     }
   ],
-  "log": {
-    "level": "panic"
+  "experimental": {
+    "cache_file": {
+      "enabled": true,
+      "path": "cache.db"
+    }
   },
   "outbounds": [
     {
@@ -139,7 +112,7 @@
     },
     {
       "packet_encoding": "",
-      "server": "104.19.112.209",
+      "server": "[2606:4700:d0::a29f:c001]",
       "server_port": 443,
       "tls": {
         "alpn": [
@@ -226,9 +199,21 @@
       "tag": "worker 5️⃣"
     },
     {
-      "tag": "💚Internet💚",
+      "tag": "direct",
+      "type": "direct"
+    },
+    {
+      "tag": "block",
+      "type": "block"
+    },
+    {
+      "tag": "dns-out",
+      "type": "dns"
+    },
+    {
+      "tag": "💚select💚",
       "type": "selector",
-      "outbounds": [
+      "outbounds":[
         "❤️Best Latency❤️",
         "worker 1️⃣",
         "worker 2️⃣",
@@ -240,7 +225,7 @@
     {
       "tag": "❤️Best Latency❤️",
       "type": "urltest",
-      "outbounds": [
+      "outbounds":[
         "worker 1️⃣",
         "worker 2️⃣",
         "worker 3️⃣",
@@ -250,49 +235,43 @@
       "url": "https://detectportal.firefox.com/success.txt",
       "interval": "60s",
       "tolerance": 0
-    },
-    {
-      "tag": "direct",
-      "type": "direct"
-    },
-    {
-      "tag": "bypass",
-      "type": "direct"
-    },
-    {
-      "tag": "block",
-      "type": "block"
-    },
-    {
-      "tag": "dns-out",
-      "type": "dns"
     }
   ],
   "route": {
+      "geoip": {
+      "download_url": "https://mirror.ghproxy.com/https://github.com/Ptechgithub/sing-box/blob/main/geo/geoip.db",
+      "download_detour": "💚select💚"
+    },
+    "geosite": {
+      "download_url": "https://mirror.ghproxy.com/https://github.com/Ptechgithub/sing-box/blob/main/geo/geosite.db",
+      "download_detour": "💚select💚"
+    },
     "auto_detect_interface": true,
+    "final": "💚select💚",
     "rules": [
       {
         "outbound": "dns-out",
-        "port": [
-          53
-        ]
+        "protocol": "dns"
       },
       {
-        "inbound": [
-          "dns-in"
-        ],
-        "outbound": "dns-out"
+        "clash_mode": "Direct",
+        "outbound": "direct"
       },
       {
-        "ip_cidr": [
-          "224.0.0.0/3",
-          "ff00::/8"
+        "clash_mode": "Global",
+        "outbound": "💚select💚"
+      },
+      {
+        "geosite": "ir",
+        "geoip": [
+          "ir",
+          "private"
         ],
-        "outbound": "block",
-        "source_ip_cidr": [
-          "224.0.0.0/3",
-          "ff00::/8"
-        ]
+        "outbound": "direct"
+      },
+      {
+        "geosite": "geolocation-!ir",
+        "outbound": "💚select💚"
       }
     ]
   }
